@@ -64,7 +64,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         string insideRoomPanelName = UIPanelManager.Instance.insideRoomUIPanel.name;
         UIPanelManager.Instance.ActivatePanel(insideRoomPanelName);
 
-        if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(RaceNChaseConstants.GAME_MODE_KEY, out object gameMode))
+        if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(GameConstants.GAME_MODE_KEY, out object gameMode))
         {
             UpdateRoomInfoText();
             UIPanelManager.Instance.UpdateGameTypeInsideRoom((string)gameMode);
@@ -77,12 +77,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         UIPanelManager.Instance.SetStartButtonActiveState(false);
 
-        if (PhotonNetwork.LocalPlayer.IsMasterClient)
-        {
-            UIPanelManager.Instance.SetLapPanelActiveState(true);
-        }
-        else
-            UIPanelManager.Instance.SetLapPanelActiveState(false);
+       // if (PhotonNetwork.LocalPlayer.IsMasterClient)
+       // {
+      //      UIPanelManager.Instance.SetLapPanelActiveState(true);
+     //   }
+     //   else
+      //      UIPanelManager.Instance.SetLapPanelActiveState(false);
     }
 
     private void UpdateRoomInfoText()
@@ -145,7 +145,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if (PhotonNetwork.LocalPlayer.ActorNumber == newMasterClient.ActorNumber)
         {
             UIPanelManager.Instance.SetStartButtonActiveState(CheckPlayerReady());
-            UIPanelManager.Instance.SetLapPanelActiveState(true);
+         //   UIPanelManager.Instance.SetLapPanelActiveState(true);
         }
     }
 
@@ -164,7 +164,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         foreach (Player player in PhotonNetwork.PlayerList)
         {
-            if (player.CustomProperties.TryGetValue(RaceNChaseConstants.PLAYER_READY_KEY, out object isReady))
+            if (player.CustomProperties.TryGetValue(GameConstants.PLAYER_READY_KEY, out object isReady))
             {
                 if (!(bool)isReady) return false;
             }

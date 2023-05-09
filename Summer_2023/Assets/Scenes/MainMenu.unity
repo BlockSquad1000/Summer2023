@@ -1396,6 +1396,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &745047665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 745047667}
+  - component: {fileID: 745047666}
+  m_Layer: 0
+  m_Name: UIPanelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &745047666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745047665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f606ad966fb801442894578d066675d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loginUIPanel: {fileID: 1670316586}
+  connectingInfoPanel: {fileID: 926301442}
+  createRoomUIPanel: {fileID: 844713593}
+  creatingRoomInfoPanel: {fileID: 47734347}
+  gameOptionsUIPanel: {fileID: 132655123}
+  joinRandomUIPanel: {fileID: 406892102}
+  insideRoomUIPanel: {fileID: 411928229}
+  lapUIPanel: {fileID: 0}
+  creatingGameUIMessagee: {fileID: 0}
+  scoreText: {fileID: 0}
+  gameTypeUIText: {fileID: 0}
+  roomInfoUIText: {fileID: 0}
+  playerListUIContainer: {fileID: 0}
+  playerEntryPrefab: {fileID: 0}
+  startGameButton: {fileID: 0}
+  roomPanelBackground: {fileID: 0}
+  deathmatchBackground: {fileID: 0}
+  characterSelectionUIObjects: []
+  characters: []
+--- !u!4 &745047667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745047665}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &844713593
 GameObject:
   m_ObjectHideFlags: 0
@@ -3000,7 +3062,7 @@ GameObject:
   - component: {fileID: 1670316589}
   - component: {fileID: 1670316588}
   m_Layer: 5
-  m_Name: MainMenuPanel
+  m_Name: LoginPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

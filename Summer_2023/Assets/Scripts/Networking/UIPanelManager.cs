@@ -21,11 +21,13 @@ public class UIPanelManager : MonoBehaviourPunCallbacks
     public GameObject gameOptionsUIPanel;
     public GameObject joinRandomUIPanel;
     public GameObject insideRoomUIPanel;
-    public GameObject lapUIPanel;
+    //public GameObject lapUIPanel;
 
     [Header("Text Fields")]
     [SerializeField] private Text creatingGameUIMessagee;
     [SerializeField] private TMP_Text scoreText;
+
+    [Header("Inside Room Panels")]
     [SerializeField] private Text gameTypeUIText;
     [SerializeField] private TMP_Text roomInfoUIText;
     [SerializeField] private GameObject playerListUIContainer;
@@ -34,7 +36,7 @@ public class UIPanelManager : MonoBehaviourPunCallbacks
     [SerializeField] private Image roomPanelBackground;
     [SerializeField] private Sprite deathmatchBackground;
 
-    [Header("Mercenary Selection Panel")]
+    [Header("Mercenary Selection Panels")]
     [SerializeField] private GameObject[] characterSelectionUIObjects;
     [SerializeField] private CharactersSO[] characters;
 
