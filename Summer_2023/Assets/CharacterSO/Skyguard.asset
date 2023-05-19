@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2972c36f413de6340b9352d71d8aaa81, type: 3}
-  m_Name: Sidewinder
+  m_Name: Skyguard
   m_EditorClassIdentifier: 
-  characterName: Sidewinder
-  characterSprite: {fileID: 21300000, guid: 4264cadddcbf8e34eb19da08551646ce, type: 3}
+  characterName: Skyguard
+  characterSprite: {fileID: 21300000, guid: 7d5d8293d1eee8940bcbc26624f86826, type: 3}
