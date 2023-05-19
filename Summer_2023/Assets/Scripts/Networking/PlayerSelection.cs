@@ -33,7 +33,7 @@ public class PlayerSelection : MonoBehaviour
 
         selectableCharacters[thisPlayer].SetActive(true);
 
-        Hashtable playerSelectionProp = new() { { GameConstants.PLAYER_SELECTION, thisPlayer } };
+        Hashtable playerSelectionProp = new Hashtable() { { GameConstants.PLAYER_SELECTION, thisPlayer } };
         PhotonNetwork.LocalPlayer.SetCustomProperties(playerSelectionProp);
     }
 
