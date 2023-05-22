@@ -80,7 +80,7 @@ public class UIPanelManager : MonoBehaviourPunCallbacks
         if(mode == GameMode.DeathMatch.ToString())
         {
             roomPanelBackground.sprite = deathmatchBackground;
-            gameTypeUIText.text = "Let's battle!";
+            gameTypeUIText.text = "Let's Battle!";
 
             for(int i = 0; i < characterSelectionUIObjects.Length; i++)
             {

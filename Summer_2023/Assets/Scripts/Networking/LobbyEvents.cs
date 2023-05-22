@@ -91,7 +91,7 @@ public class LobbyEvents : MonoBehaviour
         {
             if (PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue(GameMode.DeathMatch.ToString()))
             {
-                PhotonNetwork.LoadLevel("RacingScene");
+                PhotonNetwork.LoadLevel("DeathmatchScene");
 
             }
           /*  else if (PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue(GameMode.DeathRace.ToString()))
