@@ -35,6 +35,7 @@ public class UIPanelManager : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject startGameButton;
     [SerializeField] private Image roomPanelBackground;
     [SerializeField] private Sprite deathmatchBackground;
+    [SerializeField] private Sprite ctfBackground;
 
     [Header("Mercenary Selection Panels")]
     [SerializeField] private GameObject[] characterSelectionUIObjects;
@@ -81,15 +82,30 @@ public class UIPanelManager : MonoBehaviourPunCallbacks
         {
             roomPanelBackground.sprite = deathmatchBackground;
             gameTypeUIText.text = "Let's Battle!";
+            scoreText.text = "How many kills?";
 
             for(int i = 0; i < characterSelectionUIObjects.Length; i++)
             {
                 GameObject go = characterSelectionUIObjects[i];
                 CharactersSO ships = characters[i];
 
-                SetCharacterPanelProperties(go, ships.characterSprite, ships.characterName, string.Empty);
+               // SetCharacterPanelProperties(go, ships.characterSprite, ships.characterName, string.Empty);
             }
-        }       
+        }
+        if (mode == GameMode.CaptureTheFlag.ToString())
+        {
+            roomPanelBackground.sprite = ctfBackground;
+            gameTypeUIText.text = "Let's Capture!";
+            scoreText.text = "How many captures?";
+
+            for (int i = 0; i < characterSelectionUIObjects.Length; i++)
+            {
+                GameObject go = characterSelectionUIObjects[i];
+                CharactersSO ships = characters[i];
+
+               // SetCharacterPanelProperties(go, ships.characterSprite, ships.characterName, string.Empty);
+            }
+        }
     }
 
     private static void SetCharacterPanelProperties(GameObject go, Sprite sprite, string name, string property)

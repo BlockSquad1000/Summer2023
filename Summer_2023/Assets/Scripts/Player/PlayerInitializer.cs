@@ -46,10 +46,4 @@ public class PlayerInitializer : MonoBehaviourPunCallbacks
             playerName.gameObject.SetActive(false);
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
