@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 5456654268849078938}
   - component: {fileID: -87901469197132887}
   - component: {fileID: 9051185675807502319}
+  - component: {fileID: 4489214143666961085}
   m_Layer: 0
   m_Name: Sidewinder
   m_TagString: Player
@@ -456,6 +457,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCam: {fileID: 7911515097631230385}
   playerName: {fileID: 5707815230086572076}
+--- !u!114 &4489214143666961085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911515095670877151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1e40a185266b947bfff7d61eab858c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7911515095766553325
 GameObject:
   m_ObjectHideFlags: 0

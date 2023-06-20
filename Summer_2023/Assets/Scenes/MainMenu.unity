@@ -1015,6 +1015,7 @@ MonoBehaviour:
   settings:
     maxPlayers: 12
     gameMode: 1
+    timeToGameStart: 5
 --- !u!4 &266924437
 Transform:
   m_ObjectHideFlags: 0

@@ -26,10 +26,14 @@ public class PlayerMovement : MonoBehaviour
     public float rollSpeed;
     public float rollAcceleration;
 
+    private Rigidbody myRB;
+
     private void Start()
     {
         screenCenter.x = Screen.width * .5f;
         screenCenter.y = Screen.height * .5f;
+
+        myRB = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -52,5 +56,15 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
         transform.position += (transform.right * activeStrafeSpeed * Time.deltaTime) + (transform.up * activeHoverSpeed * Time.deltaTime);
+    }
+
+    public void EnableControls()
+    {
+        myRB.isKinematic = false;
+    }
+
+    public void DisableControls()
+    {
+        myRB.isKinematic = true;
     }
 }
