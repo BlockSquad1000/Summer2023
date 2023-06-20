@@ -94,10 +94,10 @@ public class LobbyEvents : MonoBehaviour
                 PhotonNetwork.LoadLevel("DeathmatchScene");
 
             }
-          /*  else if (PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue(GameMode.DeathRace.ToString()))
+            else if (PhotonNetwork.CurrentRoom.CustomProperties.ContainsValue(GameMode.CaptureTheFlag.ToString()))
             {
                 PhotonNetwork.LoadLevel("DeathRaceScene");
-            }*/
+            }
         }
     }
 
