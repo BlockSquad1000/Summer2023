@@ -1391,8 +1391,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterPrefabs:
   - {fileID: 7911515095670877151, guid: 4ac4dd66c1370dd45b277c7fe5bd085e, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7911515095670877151, guid: 9f90bceecbbc6124a8c309cb11dda5d3, type: 3}
+  - {fileID: 7911515095670877151, guid: 062db515c5b5ce044810a1ec2ca03f14, type: 3}
   startPositions:
   - {fileID: 1784862843}
   - {fileID: 263475950}
