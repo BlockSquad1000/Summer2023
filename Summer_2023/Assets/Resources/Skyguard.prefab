@@ -313,6 +313,9 @@ GameObject:
   - component: {fileID: 3648312414631099527}
   - component: {fileID: -4464244641426068412}
   - component: {fileID: 8146322167800874372}
+  - component: {fileID: 2875151398436496611}
+  - component: {fileID: 2336667381467993065}
+  - component: {fileID: 4742668485626821108}
   m_Layer: 0
   m_Name: Skyguard
   m_TagString: Player
@@ -471,6 +474,45 @@ MonoBehaviour:
   currentScore: 0
   winMusic: {fileID: 0}
   won: 0
+--- !u!65 &2875151398436496611
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911515095670877151}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.58, y: 1.92, z: 5.67}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &2336667381467993065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911515095670877151}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.65, y: 0.71, z: 1.63}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4742668485626821108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911515095670877151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f66072a5223a22346b5ed24be4e4079e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalHealth: 350
 --- !u!1 &7911515095766553325
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +723,6 @@ GameObject:
   - component: {fileID: 7911515096711208030}
   - component: {fileID: 7911515096711208029}
   - component: {fileID: 7911515096711208028}
-  - component: {fileID: 7911515096711208031}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -752,19 +793,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7911515096711208031
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7911515096711208025}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7911515096925327190
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +950,6 @@ GameObject:
   - component: {fileID: 7911515097519075113}
   - component: {fileID: 7911515097519075116}
   - component: {fileID: 7911515097519075119}
-  - component: {fileID: 7911515097519075118}
   m_Layer: 0
   m_Name: Wings
   m_TagString: Untagged
@@ -993,19 +1020,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7911515097519075118
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7911515097519075112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7911515097631230387
 GameObject:
   m_ObjectHideFlags: 0
