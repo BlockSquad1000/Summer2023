@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 9051185675807502319}
   - component: {fileID: 4489214143666961085}
   - component: {fileID: -8044405343969414863}
+  - component: {fileID: 4857502061716778896}
   m_Layer: 0
   m_Name: Sidewinder
   m_TagString: Player
@@ -486,6 +487,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4857502061716778896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911515095670877151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eabd73a4542838e49b6882688d1298c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalScore: 0
+  currentScore: 0
+  winMusic: {fileID: 0}
+  won: 0
 --- !u!1 &7911515095766553325
 GameObject:
   m_ObjectHideFlags: 0

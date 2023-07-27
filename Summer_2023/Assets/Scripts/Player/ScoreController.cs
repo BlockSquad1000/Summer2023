@@ -88,7 +88,7 @@ public class ScoreController : MonoBehaviourPun
         GetComponent<PlayerInitializer>().playerCam.transform.parent = null;
         GetComponent<PlayerMovement>().enabled = false;
 
-        DeathmatchUIManager.Instance.FinishUIBackground.SetActive(true);
+        DeathmatchUIManager.Instance.winScreen.SetActive(true);
         winMusic.Play();
         DeathmatchUIManager.Instance.finished = true;
 

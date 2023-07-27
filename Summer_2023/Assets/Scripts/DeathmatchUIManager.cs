@@ -1,21 +1,22 @@
-using TMPro;
 using UnityEngine;
 
 using Photon.Pun;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DeathmatchUIManager : MonoBehaviourPunCallbacks
 {
     public GameObject pauseMenu;
     bool gameIsPause = false;
+    public GameObject winScreen;
 
     public TMP_Text countdownUIText;
 
-    public GameObject[] scoreOrderUIObjects;
-    public GameObject FinishUIBackground;
-    public TMP_Text timeCountText;
+    public TMP_Text scoreText;
 
-    public bool finished;
+    public GameObject[] scoreOrderUIObjects;
+
+    public bool finished = false;
 
     public static DeathmatchUIManager Instance { get; private set; }
 
@@ -37,8 +38,9 @@ public class DeathmatchUIManager : MonoBehaviourPunCallbacks
         {
             go.SetActive(false);
         }
+
         pauseMenu.SetActive(false);
-        FinishUIBackground.SetActive(false);
+        winScreen.SetActive(false);
     }
 
     public GameObject GetScoreOrderUIObject(int which)

@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 9051185675807502319}
   - component: {fileID: 6708787712198474330}
   - component: {fileID: 8813928207948719041}
+  - component: {fileID: 3822507259471950416}
   m_Layer: 0
   m_Name: Hunter
   m_TagString: Player
@@ -486,6 +487,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3822507259471950416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911515095670877151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eabd73a4542838e49b6882688d1298c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalScore: 0
+  currentScore: 0
+  winMusic: {fileID: 0}
+  won: 0
 --- !u!1 &7911515095766553325
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +713,7 @@ GameObject:
   - component: {fileID: 7911515096711208030}
   - component: {fileID: 7911515096711208029}
   - component: {fileID: 7911515096711208028}
-  - component: {fileID: 7911515096711208031}
+  - component: {fileID: 12395905946496460}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -767,7 +784,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7911515096711208031
+--- !u!65 &12395905946496460
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -778,7 +795,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.0000001, y: 1, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7911515096925327190
 GameObject:
@@ -937,7 +954,7 @@ GameObject:
   - component: {fileID: 7911515097519075113}
   - component: {fileID: 7911515097519075116}
   - component: {fileID: 7911515097519075119}
-  - component: {fileID: 7911515097519075118}
+  - component: {fileID: 6190642641476678598}
   m_Layer: 0
   m_Name: Wings
   m_TagString: Untagged
@@ -1008,7 +1025,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7911515097519075118
+--- !u!65 &6190642641476678598
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
