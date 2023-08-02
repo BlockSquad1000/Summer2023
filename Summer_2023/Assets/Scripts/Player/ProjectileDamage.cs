@@ -15,7 +15,7 @@ public class ProjectileDamage : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            other.GetComponent<Health>().Damage(5);
+            other.GetComponent<PlayerHealth>().ApplyDamage(5);
             Debug.Log("Hit player.");
             Destroy(this.gameObject);
         }

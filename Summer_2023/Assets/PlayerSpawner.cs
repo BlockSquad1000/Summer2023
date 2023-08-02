@@ -7,6 +7,8 @@ public class PlayerSpawner : MonoBehaviour
     public GameObject[] characterPrefabs;
     public Transform[] startPositions;
 
+    //public int nextPlayersTeam;
+
     // Start is called before the first frame update
     void Start()
     {
