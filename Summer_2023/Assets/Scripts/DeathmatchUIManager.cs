@@ -13,6 +13,7 @@ public class DeathmatchUIManager : MonoBehaviourPunCallbacks
     public TMP_Text countdownUIText;
 
     public TMP_Text scoreText;
+    public TMP_Text ammoText;
 
     public GameObject[] scoreOrderUIObjects;
 

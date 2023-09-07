@@ -1,8 +1,10 @@
+using Photon.Pun;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class PlayerShoot : MonoBehaviour
+using UnityEngine;
+using TMPro;
+
+public class PlayerShoot : MonoBehaviourPun
 {
     public float launchVelocity;
     public float nextFire;
@@ -11,14 +13,72 @@ public class PlayerShoot : MonoBehaviour
 
     public GameObject projectilePrefab;
     public Transform firePoint;
+    public CharactersSO playerProperties;
 
     private Vector3 aim;
 
     public bool primary;
     public bool secondary;
 
-    // Update is called once per frame
-    void Update()
+    private int currentAmmo;
+    public int ammoReplenishAmount;
+
+    private bool firing = false;
+    private bool canFire = true;
+
+    private void Start()
+    {
+        currentAmmo = playerProperties.ammoCapacity;
+    }
+
+    private void FixedUpdate()
+    {
+        DeathmatchUIManager.Instance.ammoText.text = currentAmmo.ToString();
+        if (!photonView.IsMine) return;
+
+        if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire && primary)
+        {
+            photonView.RPC("NotifyFire", RpcTarget.AllBuffered);
+        }
+        else
+        {
+            photonView.RPC("CeaseFire", RpcTarget.AllBuffered);
+        }
+    }
+
+    [PunRPC]
+    public void NotifyFire()
+    {
+        if(!firing && canFire)
+        {
+            firing = true;
+            canFire = false;
+            StartCoroutine(Fire());
+        }
+    }
+
+    [PunRPC]
+    public void CeaseFire()
+    {
+        firing = false;
+    }
+
+    private IEnumerator Fire()
+    {
+        while (firing)
+        {
+            if(currentAmmo > 0)
+            {
+                GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
+                projectile.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
+                Destroy(projectile.gameObject, bulletLifetime);
+                currentAmmo--;
+            }
+        }
+
+        yield return new WaitForSeconds(playerProperties.rateOfFire);
+    }
+    /*void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire && primary)
         {
@@ -42,6 +102,18 @@ public class PlayerShoot : MonoBehaviour
         GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
         projectile.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (launchVelocity, 0, 0));
         Destroy(projectile.gameObject, bulletLifetime);
+    }*/
+
+    public void ReplenishAmmo()
+    {
+        if(currentAmmo <= playerProperties.ammoCapacity)
+        {
+            currentAmmo += ammoReplenishAmount;
+            if(currentAmmo >= playerProperties.ammoCapacity)
+            {
+                currentAmmo = playerProperties.ammoCapacity;
+            }
+        }
     }
 }
     
