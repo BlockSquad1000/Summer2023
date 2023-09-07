@@ -17,8 +17,8 @@ public class PlayerShoot : MonoBehaviourPun
 
     private Vector3 aim;
 
-    public bool primary;
-    public bool secondary;
+   // public bool primary;
+   // public bool secondary;
 
     private int currentAmmo;
     public int ammoReplenishAmount;
@@ -36,7 +36,7 @@ public class PlayerShoot : MonoBehaviourPun
         DeathmatchUIManager.Instance.ammoText.text = currentAmmo.ToString();
         if (!photonView.IsMine) return;
 
-        if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire && primary)
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             photonView.RPC("NotifyFire", RpcTarget.AllBuffered);
         }
@@ -74,10 +74,13 @@ public class PlayerShoot : MonoBehaviourPun
                 Destroy(projectile.gameObject, bulletLifetime);
                 currentAmmo--;
             }
+
+            yield return new WaitForSeconds(playerProperties.rateOfFire);
         }
 
-        yield return new WaitForSeconds(playerProperties.rateOfFire);
+        canFire = true;
     }
+
     /*void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire && primary)

@@ -392,6 +392,7 @@ GameObject:
   - component: {fileID: 2875151398436496611}
   - component: {fileID: 2336667381467993065}
   - component: {fileID: 3040882999298280347}
+  - component: {fileID: 296509358024805346}
   m_Layer: 0
   m_Name: Skyguard
   m_TagString: Player
@@ -593,6 +594,26 @@ MonoBehaviour:
   killValue: 0
   playerUIObject: {fileID: 5488989334332912417}
   respawnTime: 10
+--- !u!114 &296509358024805346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911515095670877151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchVelocity: 10000
+  nextFire: 0
+  fireRate: 0.1
+  bulletLifetime: 1
+  projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
+  firePoint: {fileID: 7911515095670877148}
+  playerProperties: {fileID: 11400000, guid: 23bb9dc1adb44964ba7f59ea518817b0, type: 2}
+  ammoReplenishAmount: 20
 --- !u!1 &7911515095766553325
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +684,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7911515096049242039}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
   m_Name: 
@@ -674,8 +695,8 @@ MonoBehaviour:
   bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515096049242037}
-  primary: 1
-  secondary: 0
+  playerProperties: {fileID: 11400000, guid: 23bb9dc1adb44964ba7f59ea518817b0, type: 2}
+  ammoReplenishAmount: 20
 --- !u!1 &7911515096548894812
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +800,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7911515096698104662}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
   m_Name: 
@@ -790,8 +811,8 @@ MonoBehaviour:
   bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515096698104663}
-  primary: 0
-  secondary: 1
+  playerProperties: {fileID: 11400000, guid: 23bb9dc1adb44964ba7f59ea518817b0, type: 2}
+  ammoReplenishAmount: 20
 --- !u!1 &7911515096711208025
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,7 +976,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7911515097192867590}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
   m_Name: 
@@ -966,8 +987,8 @@ MonoBehaviour:
   bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515097192867591}
-  primary: 1
-  secondary: 0
+  playerProperties: {fileID: 11400000, guid: 23bb9dc1adb44964ba7f59ea518817b0, type: 2}
+  ammoReplenishAmount: 20
 --- !u!1 &7911515097243849018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,7 +1027,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7911515097243849018}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
   m_Name: 
@@ -1017,8 +1038,8 @@ MonoBehaviour:
   bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515097243849019}
-  primary: 0
-  secondary: 1
+  playerProperties: {fileID: 11400000, guid: 23bb9dc1adb44964ba7f59ea518817b0, type: 2}
+  ammoReplenishAmount: 20
 --- !u!1 &7911515097519075112
 GameObject:
   m_ObjectHideFlags: 0
