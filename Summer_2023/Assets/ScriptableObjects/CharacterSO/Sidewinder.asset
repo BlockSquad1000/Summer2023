@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Sidewinder
   characterSprite: {fileID: 21300000, guid: 4264cadddcbf8e34eb19da08551646ce, type: 3}
+  weaponName: Plasma Caster
+  weaponDamage: 10
+  rateOfFire: 0.2
+  projectileSpeed: 100
+  ammoCapacity: 100

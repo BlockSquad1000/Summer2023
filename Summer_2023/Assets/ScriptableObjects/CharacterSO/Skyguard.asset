@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Skyguard
   characterSprite: {fileID: 21300000, guid: 7d5d8293d1eee8940bcbc26624f86826, type: 3}
+  weaponName: Flak Cannon
+  weaponDamage: 10
+  rateOfFire: 0.2
+  projectileSpeed: 100
+  ammoCapacity: 100

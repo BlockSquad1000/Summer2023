@@ -648,8 +648,10 @@ MonoBehaviour:
   bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515096049242037}
+  playerProperties: {fileID: 0}
   primary: 1
   secondary: 0
+  ammoReplenishAmount: 0
 --- !u!1 &7911515096548894812
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,8 +766,10 @@ MonoBehaviour:
   bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515096698104663}
+  playerProperties: {fileID: 0}
   primary: 0
   secondary: 1
+  ammoReplenishAmount: 0
 --- !u!1 &7911515096711208025
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,8 +944,10 @@ MonoBehaviour:
   bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515097192867591}
+  playerProperties: {fileID: 0}
   primary: 1
   secondary: 0
+  ammoReplenishAmount: 0
 --- !u!1 &7911515097243849018
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,8 +997,10 @@ MonoBehaviour:
   bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515097243849019}
+  playerProperties: {fileID: 0}
   primary: 0
   secondary: 1
+  ammoReplenishAmount: 0
 --- !u!1 &7911515097519075112
 GameObject:
   m_ObjectHideFlags: 0
