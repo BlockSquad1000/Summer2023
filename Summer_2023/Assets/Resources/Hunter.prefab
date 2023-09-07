@@ -625,8 +625,6 @@ MonoBehaviour:
   killValue: 0
   playerUIObject: {fileID: 5488989334332912417}
   respawnTime: 10
-  deathUIPanel: {fileID: 0}
-  respawnTimerUIText: {fileID: 0}
 --- !u!1 &7911515095766553325
 GameObject:
   m_ObjectHideFlags: 0
