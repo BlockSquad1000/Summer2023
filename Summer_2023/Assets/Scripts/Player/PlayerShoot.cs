@@ -31,7 +31,6 @@ public class PlayerShoot : MonoBehaviourPun
         currentAmmo = playerProperties.ammoCapacity;
     }
 
-    [PunRPC]
     private void FixedUpdate()
     {
         DeathmatchUIManager.Instance.ammoText.text = currentAmmo.ToString();

@@ -25,11 +25,14 @@ public class Countdown : MonoBehaviourPunCallbacks
         if(time > 0)
         {
             DeathmatchUIManager.Instance.SetCountdownUIText(time.ToString());
+            GetComponent<PlayerMovement>().DisableControls();
+            GetComponent<PlayerShoot>().enabled = false;
         }
         else
         {
             DeathmatchUIManager.Instance.SetCountdownUIText("BEGIN!");
             GetComponent<PlayerMovement>().EnableControls();
+            GetComponent<PlayerShoot>().enabled = true;
             StartCoroutine(ClearCountdownText());
         }
     }

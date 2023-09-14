@@ -37,6 +37,16 @@ public class ScoreController : MonoBehaviourPun
         }
     }
 
+    public void FixedUpdate()
+    {
+        if(currentScore >= totalScore)
+        {
+            GameFinished();
+        }
+
+        DeathmatchUIManager.Instance.scoreText.text = currentScore.ToString();
+    }
+
     private void OnEnable()
     {
         PhotonNetwork.NetworkingClient.EventReceived += OnEventReceived;
@@ -73,14 +83,7 @@ public class ScoreController : MonoBehaviourPun
         }
     }
 
-    private void ScoreIncrease()
-    {
-        if (currentScore >= totalScore)
-        {
-            GameFinished();
-        }
-    }
-
+    [PunRPC]
     private void GameFinished()
     {
         scoreOrder += 1;

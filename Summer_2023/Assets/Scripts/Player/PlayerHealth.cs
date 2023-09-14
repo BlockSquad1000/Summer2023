@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviourPun
 {
     public float totalHealth;
     public Image healthBar;
-    private float currentHealth;
+    public float currentHealth;
     public int killValue;
 
     public GameObject playerUIObject;
@@ -33,6 +33,8 @@ public class PlayerHealth : MonoBehaviourPun
         {
             deathUIPanel = GameObject.Find("DeathScreen");
             respawnTimerUIText = deathUIPanel.transform.Find("TXT_Countdown").GetComponent<Text>();
+
+            deathUIPanel.SetActive(false);
         }
     }
 

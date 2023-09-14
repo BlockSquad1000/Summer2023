@@ -1,23 +1,63 @@
+using Photon.Pun;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class ProjectileDamage : MonoBehaviour
 {
+    private float damage;
+
+    private void Start()
+    {
+        StartCoroutine(Kill());
+    }
+
+    private IEnumerator Kill()
+    {
+        while (true)
+        {
+            if(transform.position.sqrMagnitude > 2500)
+            {
+                Destroy(gameObject);
+            }
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+    public void Initialize(Vector3 dir, float speed, float damage)
+    {
+        transform.forward = dir;
+
+        this.damage = damage;
+
+        GetComponent<Rigidbody>().velocity = dir * speed * Time.fixedDeltaTime;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Asteroid")
+        if(other.gameObject.CompareTag("Player") && other.gameObject.GetComponent<PhotonView>().IsMine)
         {
-            other.GetComponent<Health>().Damage(5);
-            Debug.Log("Hit asteroid.");
-            Destroy(this.gameObject);
+            other.gameObject.GetComponent<PhotonView>().RPC("ApplyDamage", RpcTarget.AllBuffered, damage);
         }
 
-        if (other.gameObject.tag == "Player")
+        if(other.gameObject.GetComponent<PlayerHealth>().currentHealth <= damage)
         {
-            other.GetComponent<PlayerHealth>().ApplyDamage(5);
-            Debug.Log("Hit player.");
-            Destroy(this.gameObject);
+            AddScore(other.gameObject.GetComponent<PlayerHealth>().killValue);
         }
+
+        Destroy(gameObject);
+    }
+
+    public void AddScore(int killValue)
+    {
+        GetComponentInParent<ScoreController>().currentScore += killValue;
+        Debug.Log("Adding" + killValue);
+
+        Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
     }
 }

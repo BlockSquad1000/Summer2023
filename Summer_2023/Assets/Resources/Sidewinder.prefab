@@ -367,6 +367,7 @@ GameObject:
   - component: {fileID: 4555545442723502365}
   - component: {fileID: 5129299144160668239}
   - component: {fileID: 2404607512374164734}
+  - component: {fileID: 1690532223586813983}
   m_Layer: 0
   m_Name: Sidewinder
   m_TagString: Player
@@ -565,6 +566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalHealth: 350
   healthBar: {fileID: 7797142892254056869}
+  currentHealth: 0
   killValue: 0
   playerUIObject: {fileID: 5488989334332912417}
   respawnTime: 10
@@ -588,6 +590,22 @@ MonoBehaviour:
   firePoint: {fileID: 7911515096049242037}
   playerProperties: {fileID: 11400000, guid: 1689b59bc2329b84690aaf36a4a4bf44, type: 2}
   ammoReplenishAmount: 20
+--- !u!114 &1690532223586813983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911515095670877151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eabd73a4542838e49b6882688d1298c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalScore: 0
+  currentScore: 0
+  winMusic: {fileID: 0}
+  won: 0
 --- !u!1 &7911515095766553325
 GameObject:
   m_ObjectHideFlags: 0
