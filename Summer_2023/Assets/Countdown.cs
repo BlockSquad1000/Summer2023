@@ -27,6 +27,9 @@ public class Countdown : MonoBehaviourPunCallbacks
             DeathmatchUIManager.Instance.SetCountdownUIText(time.ToString());
             GetComponent<PlayerMovement>().DisableControls();
             GetComponent<PlayerShoot>().enabled = false;
+
+            DeathmatchUIManager.Instance.scoreText.enabled = false;
+            DeathmatchUIManager.Instance.ammoText.enabled = false;
         }
         else
         {
@@ -34,6 +37,9 @@ public class Countdown : MonoBehaviourPunCallbacks
             GetComponent<PlayerMovement>().EnableControls();
             GetComponent<PlayerShoot>().enabled = true;
             StartCoroutine(ClearCountdownText());
+
+            DeathmatchUIManager.Instance.scoreText.enabled = true;
+            DeathmatchUIManager.Instance.ammoText.enabled = true;
         }
     }
 
@@ -49,7 +55,7 @@ public class Countdown : MonoBehaviourPunCallbacks
 
     private IEnumerator ClearCountdownText()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         DeathmatchUIManager.Instance.SetCountdownUIText(string.Empty);
         enabled = false;
     }
