@@ -28,7 +28,7 @@ public class PlayerShoot : MonoBehaviourPun
 
     private void Start()
     {
-        currentAmmo = playerProperties.ammoCapacity;
+        MaxAmmo();
     }
 
     private void FixedUpdate()
@@ -117,6 +117,11 @@ public class PlayerShoot : MonoBehaviourPun
                 currentAmmo = playerProperties.ammoCapacity;
             }
         }
+    }
+
+    public void MaxAmmo()
+    {
+        currentAmmo = playerProperties.ammoCapacity;
     }
 }
     
