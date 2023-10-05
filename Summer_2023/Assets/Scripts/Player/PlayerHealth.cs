@@ -18,6 +18,8 @@ public class PlayerHealth : MonoBehaviourPun
     private GameObject deathUIPanel;
     private Text respawnTimerUIText;
 
+    public PlayerSpawner respawner;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,16 @@ public class PlayerHealth : MonoBehaviourPun
             respawnTimerUIText = deathUIPanel.transform.Find("TXT_Countdown").GetComponent<Text>();
 
             deathUIPanel.SetActive(false);
+        }
+    }
+
+    [PunRPC]
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Die();
         }
     }
 
