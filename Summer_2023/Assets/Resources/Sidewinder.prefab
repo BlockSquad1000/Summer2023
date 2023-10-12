@@ -587,11 +587,12 @@ MonoBehaviour:
   launchVelocity: 10000
   nextFire: 0
   fireRate: 0.1
-  bulletLifetime: 1
+  bulletLifetime: 50
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515096049242037}
   playerProperties: {fileID: 11400000, guid: 1689b59bc2329b84690aaf36a4a4bf44, type: 2}
   ammoReplenishAmount: 20
+  weaponSound: {fileID: 0}
 --- !u!114 &1690532223586813983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,6 +692,7 @@ MonoBehaviour:
   firePoint: {fileID: 7911515096049242037}
   playerProperties: {fileID: 11400000, guid: 1689b59bc2329b84690aaf36a4a4bf44, type: 2}
   ammoReplenishAmount: 20
+  weaponSound: {fileID: 0}
 --- !u!1 &7911515096548894812
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,6 +809,7 @@ MonoBehaviour:
   firePoint: {fileID: 7911515096698104663}
   playerProperties: {fileID: 11400000, guid: 1689b59bc2329b84690aaf36a4a4bf44, type: 2}
   ammoReplenishAmount: 20
+  weaponSound: {fileID: 0}
 --- !u!1 &7911515096711208025
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,6 +986,7 @@ MonoBehaviour:
   firePoint: {fileID: 7911515097192867591}
   playerProperties: {fileID: 11400000, guid: 1689b59bc2329b84690aaf36a4a4bf44, type: 2}
   ammoReplenishAmount: 20
+  weaponSound: {fileID: 0}
 --- !u!1 &7911515097243849018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1038,7 @@ MonoBehaviour:
   firePoint: {fileID: 7911515097243849019}
   playerProperties: {fileID: 11400000, guid: 1689b59bc2329b84690aaf36a4a4bf44, type: 2}
   ammoReplenishAmount: 20
+  weaponSound: {fileID: 0}
 --- !u!1 &7911515097519075112
 GameObject:
   m_ObjectHideFlags: 0

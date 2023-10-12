@@ -6,10 +6,6 @@ using TMPro;
 
 public class PlayerShoot : MonoBehaviourPun
 {
-    public float launchVelocity;
-    public float nextFire;
-    public float fireRate;
-    public float bulletLifetime;
 
     public GameObject projectilePrefab;
     public Transform firePoint;
@@ -26,9 +22,21 @@ public class PlayerShoot : MonoBehaviourPun
     private bool firing = false;
     private bool canFire = true;
 
+    private bool isLaser = false;
+  //  private LineRenderer lineRenderer;
+
+    public AudioSource weaponSound;
+
     private void Start()
     {
         MaxAmmo();
+
+      /*  isLaser = playerProperties.weaponName == "Laser Beam";
+        if (isLaser)
+        {
+            lineRenderer = GetComponentInChildren<LineRenderer>();
+            lineRenderer.startWidth = 0.1f;
+        }*/
     }
 
     private void FixedUpdate()
@@ -54,6 +62,7 @@ public class PlayerShoot : MonoBehaviourPun
             firing = true;
             canFire = false;
             StartCoroutine(Fire());
+            Debug.Log("Notifying fire");
         }
     }
 
@@ -69,10 +78,35 @@ public class PlayerShoot : MonoBehaviourPun
         {
             if(currentAmmo > 0)
             {
-                GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
-                projectile.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(launchVelocity, 0, 0));
-                Destroy(projectile.gameObject, bulletLifetime);
-                currentAmmo--;
+               /* if (isLaser)
+                {
+                    Ray laser = new Ray(firePoint.position, transform.forward * 200f);
+                    if(Physics.Raycast(laser, out RaycastHit hit))
+                    {
+                        lineRenderer.enabled = true;
+                        lineRenderer.SetPosition(0, firePoint.position);
+                        lineRenderer.SetPosition(1, hit.point);
+                        weaponSound.Play();
+                        currentAmmo--;
+
+                        StartCoroutine(DisableLaser());
+
+                        GameObject go = hit.collider.gameObject;
+                        if(go.CompareTag("Player") && go.GetComponent<PhotonView>().IsMine)
+                        {
+                            go.GetComponent<PhotonView>().RPC("ApplyDamage", RpcTarget.AllBuffered, playerProperties.weaponDamage);
+                        }
+                    }
+                }*/
+               // else
+              //  {
+                    GameObject go = Instantiate(projectilePrefab, firePoint);
+                    go.GetComponent<ProjectileDamage>().Initialize(transform.forward, playerProperties.projectileSpeed, playerProperties.weaponDamage);
+                    //weaponSound.Play();
+                    currentAmmo--;
+                    Debug.Log("Currently firing projectiles.");
+            //    }
+                
             }
 
             yield return new WaitForSeconds(playerProperties.rateOfFire);
@@ -81,30 +115,10 @@ public class PlayerShoot : MonoBehaviourPun
         canFire = true;
     }
 
-    /*void Update()
+   /* private IEnumerator DisableLaser()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire && primary)
-        {
-            Fire();
-            nextFire = Time.time + fireRate;
-        }
-
-        if (Input.GetKey(KeyCode.Mouse1) && Time.time > nextFire && secondary)
-        {
-            Fire();
-            nextFire = Time.time + fireRate;
-        }
-    }
-
-    void Fire()
-    {
-    //    Camera cam = Camera.main;
-
-     //   Vector3 mousePosition = Input.mousePosition;
-     //   aim = cam.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, cam.nearClipPlane));
-        GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
-        projectile.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (launchVelocity, 0, 0));
-        Destroy(projectile.gameObject, bulletLifetime);
+        yield return new WaitForSeconds(playerProperties.rateOfFire * 0.5f);
+        lineRenderer.enabled = false;
     }*/
 
     public void ReplenishAmmo()
