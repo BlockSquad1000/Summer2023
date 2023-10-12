@@ -642,14 +642,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchVelocity: 10000
-  nextFire: 0
-  fireRate: 0.1
-  bulletLifetime: 3
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515096049242037}
   playerProperties: {fileID: 11400000, guid: 58c08929fb503604b8d047b2bd43c14a, type: 2}
   ammoReplenishAmount: 20
+  weaponSound: {fileID: 0}
 --- !u!114 &-7869246192351711276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -741,14 +738,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchVelocity: 10000
-  nextFire: 0
-  fireRate: 0.1
-  bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515096049242037}
   playerProperties: {fileID: 11400000, guid: 58c08929fb503604b8d047b2bd43c14a, type: 2}
   ammoReplenishAmount: 20
+  weaponSound: {fileID: 0}
 --- !u!1 &7911515096548894812
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,14 +851,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchVelocity: 10000
-  nextFire: 0
-  fireRate: 0.1
-  bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515096698104663}
   playerProperties: {fileID: 11400000, guid: 58c08929fb503604b8d047b2bd43c14a, type: 2}
   ammoReplenishAmount: 20
+  weaponSound: {fileID: 0}
 --- !u!1 &7911515096711208025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,14 +1024,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchVelocity: 10000
-  nextFire: 0
-  fireRate: 0.1
-  bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515097192867591}
   playerProperties: {fileID: 11400000, guid: 58c08929fb503604b8d047b2bd43c14a, type: 2}
   ammoReplenishAmount: 20
+  weaponSound: {fileID: 0}
 --- !u!1 &7911515097243849018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,14 +1072,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchVelocity: 10000
-  nextFire: 0
-  fireRate: 0.1
-  bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515097243849019}
   playerProperties: {fileID: 11400000, guid: 58c08929fb503604b8d047b2bd43c14a, type: 2}
   ammoReplenishAmount: 20
+  weaponSound: {fileID: 0}
 --- !u!1 &7911515097519075112
 GameObject:
   m_ObjectHideFlags: 0
