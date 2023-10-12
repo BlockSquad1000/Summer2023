@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 using Photon.Pun;
 
@@ -15,10 +16,13 @@ public class PlayerHealth : MonoBehaviourPun
     public GameObject playerUIObject;
     public int respawnTime = 10;
 
-    private GameObject deathUIPanel;
-    private Text respawnTimerUIText;
+    private PlayerShoot ammo;
+    private CharactersSO playerProperties;
 
-    public PlayerSpawner respawner;
+    [SerializeField] private GameObject deathUIPanel;
+    [SerializeField] private TMP_Text respawnTimerUIText;
+
+   // public PlayerSpawner respawner;
 
     // Start is called before the first frame update
     void Start()
@@ -34,17 +38,17 @@ public class PlayerHealth : MonoBehaviourPun
         if (photonView.IsMine)
         {
             deathUIPanel = GameObject.Find("DeathScreen");
-            respawnTimerUIText = deathUIPanel.transform.Find("TXT_Countdown").GetComponent<Text>();
+            respawnTimerUIText = deathUIPanel.transform.Find("TXT_Countdown").GetComponent<TMP_Text>();
+            ammo = GetComponent<PlayerShoot>();
 
             deathUIPanel.SetActive(false);
         }
     }
 
     [PunRPC]
-
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.E))
         {
             Die();
         }
@@ -119,6 +123,7 @@ public class PlayerHealth : MonoBehaviourPun
     {
         currentHealth = totalHealth;
         healthBar.fillAmount = 1f;
+        ammo.MaxAmmo();
 
         ChangeLivingState(true);
     }
