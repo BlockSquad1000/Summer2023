@@ -17,5 +17,5 @@ MonoBehaviour:
   weaponName: H59 Machine Gun
   weaponDamage: 10
   rateOfFire: 0.2
-  projectileSpeed: 100
+  projectileSpeed: 1000
   ammoCapacity: 100
