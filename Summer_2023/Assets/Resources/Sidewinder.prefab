@@ -429,6 +429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poisonCloud: {fileID: 7911515096925327190}
   poisionActive: 0
+  cloudAudio: {fileID: 0}
 --- !u!114 &5456654268849078938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,7 +590,13 @@ MonoBehaviour:
   firePoint: {fileID: 7911515096049242037}
   playerProperties: {fileID: 11400000, guid: 1689b59bc2329b84690aaf36a4a4bf44, type: 2}
   ammoReplenishAmount: 20
-  weaponSound: {fileID: -8380476671031430341}
+  primaryFire: 0
+  secondaryFire: 0
+  weaponAudio: {fileID: -8380476671031430341}
+  firingSounds:
+  - {fileID: 8300000, guid: 2e410d93ddc3f09479c646ed41aa8a9c, type: 3}
+  - {fileID: 8300000, guid: b84fd0e2fe15be641bd0e0f990fb524e, type: 3}
+  currentClip: {fileID: 0}
 --- !u!82 &-8380476671031430341
 AudioSource:
   m_ObjectHideFlags: 0
@@ -600,7 +607,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2e410d93ddc3f09479c646ed41aa8a9c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.4
   m_Pitch: 1
@@ -765,7 +772,11 @@ MonoBehaviour:
   firePoint: {fileID: 7911515096049242037}
   playerProperties: {fileID: 11400000, guid: 1689b59bc2329b84690aaf36a4a4bf44, type: 2}
   ammoReplenishAmount: 20
-  weaponSound: {fileID: 0}
+  primaryFire: 0
+  secondaryFire: 0
+  weaponAudio: {fileID: 0}
+  firingSounds: []
+  currentClip: {fileID: 0}
 --- !u!1 &7911515096548894812
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +889,11 @@ MonoBehaviour:
   firePoint: {fileID: 7911515096698104663}
   playerProperties: {fileID: 11400000, guid: 1689b59bc2329b84690aaf36a4a4bf44, type: 2}
   ammoReplenishAmount: 20
-  weaponSound: {fileID: 0}
+  primaryFire: 0
+  secondaryFire: 0
+  weaponAudio: {fileID: 0}
+  firingSounds: []
+  currentClip: {fileID: 0}
 --- !u!1 &7911515096711208025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,7 +1066,11 @@ MonoBehaviour:
   firePoint: {fileID: 7911515097192867591}
   playerProperties: {fileID: 11400000, guid: 1689b59bc2329b84690aaf36a4a4bf44, type: 2}
   ammoReplenishAmount: 20
-  weaponSound: {fileID: 0}
+  primaryFire: 0
+  secondaryFire: 0
+  weaponAudio: {fileID: 0}
+  firingSounds: []
+  currentClip: {fileID: 0}
 --- !u!1 &7911515097243849018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,7 +1118,11 @@ MonoBehaviour:
   firePoint: {fileID: 7911515097243849019}
   playerProperties: {fileID: 11400000, guid: 1689b59bc2329b84690aaf36a4a4bf44, type: 2}
   ammoReplenishAmount: 20
-  weaponSound: {fileID: 0}
+  primaryFire: 0
+  secondaryFire: 0
+  weaponAudio: {fileID: 0}
+  firingSounds: []
+  currentClip: {fileID: 0}
 --- !u!1 &7911515097519075112
 GameObject:
   m_ObjectHideFlags: 0

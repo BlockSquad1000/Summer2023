@@ -15,7 +15,7 @@ MonoBehaviour:
   characterName: Hunter
   characterSprite: {fileID: 21300000, guid: f917fa7c929c9ba49be1c782f1a79320, type: 3}
   weaponName: H59 Machine Gun
-  weaponDamage: 10
-  rateOfFire: 0.2
+  weaponDamage: 5
+  rateOfFire: 0.08
   projectileSpeed: 10000
-  ammoCapacity: 100
+  ammoCapacity: 150
