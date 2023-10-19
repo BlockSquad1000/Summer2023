@@ -367,7 +367,6 @@ GameObject:
   - component: {fileID: 4555545442723502365}
   - component: {fileID: 5129299144160668239}
   - component: {fileID: 2404607512374164734}
-  - component: {fileID: 1690532223586813983}
   - component: {fileID: -8380476671031430341}
   m_Layer: 0
   m_Name: Sidewinder
@@ -591,22 +590,6 @@ MonoBehaviour:
   playerProperties: {fileID: 11400000, guid: 1689b59bc2329b84690aaf36a4a4bf44, type: 2}
   ammoReplenishAmount: 20
   weaponSound: {fileID: -8380476671031430341}
---- !u!114 &1690532223586813983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7911515095670877151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eabd73a4542838e49b6882688d1298c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalScore: 0
-  currentScore: 0
-  winMusic: {fileID: 0}
-  won: 0
 --- !u!82 &-8380476671031430341
 AudioSource:
   m_ObjectHideFlags: 0
@@ -617,9 +600,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0e5371f2bbdfe294580f76ed5a10cfde, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2e410d93ddc3f09479c646ed41aa8a9c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0

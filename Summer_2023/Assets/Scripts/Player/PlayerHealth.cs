@@ -49,7 +49,7 @@ public class PlayerHealth : MonoBehaviourPun
     [PunRPC]
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.M))
         {
             Die();
         }

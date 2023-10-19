@@ -425,7 +425,6 @@ GameObject:
   - component: {fileID: 7167434947976570463}
   - component: {fileID: -3940207760328437133}
   - component: {fileID: 1962760386659585040}
-  - component: {fileID: -7869246192351711276}
   - component: {fileID: 4859413551447660541}
   m_Layer: 0
   m_Name: Hunter
@@ -649,22 +648,6 @@ MonoBehaviour:
   playerProperties: {fileID: 11400000, guid: 58c08929fb503604b8d047b2bd43c14a, type: 2}
   ammoReplenishAmount: 20
   weaponSound: {fileID: 4859413551447660541}
---- !u!114 &-7869246192351711276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7911515095670877151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eabd73a4542838e49b6882688d1298c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalScore: 0
-  currentScore: 0
-  winMusic: {fileID: 0}
-  won: 0
 --- !u!82 &4859413551447660541
 AudioSource:
   m_ObjectHideFlags: 0

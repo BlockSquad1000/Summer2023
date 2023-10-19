@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 2336667381467993065}
   - component: {fileID: 3040882999298280347}
   - component: {fileID: 296509358024805346}
-  - component: {fileID: -413672189959070681}
+  - component: {fileID: -6727736527077786652}
   m_Layer: 0
   m_Name: Skyguard
   m_TagString: Player
@@ -594,9 +594,11 @@ MonoBehaviour:
   healthBar: {fileID: 7551672596884600571}
   currentHealth: 0
   killValue: 0
+  healthRestoreAmount: 35
   playerUIObject: {fileID: 5488989334332912417}
   respawnTime: 10
-  respawner: {fileID: 0}
+  deathUIPanel: {fileID: 0}
+  respawnTimerUIText: {fileID: 0}
 --- !u!114 &296509358024805346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,30 +611,107 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchVelocity: 10000
-  nextFire: 0
-  fireRate: 0.1
-  bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515095670877148}
   playerProperties: {fileID: 11400000, guid: 23bb9dc1adb44964ba7f59ea518817b0, type: 2}
   ammoReplenishAmount: 20
---- !u!114 &-413672189959070681
-MonoBehaviour:
+  weaponSound: {fileID: 0}
+--- !u!82 &-6727736527077786652
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7911515095670877151}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eabd73a4542838e49b6882688d1298c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalScore: 0
-  currentScore: 0
-  winMusic: {fileID: 0}
-  won: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0e5371f2bbdfe294580f76ed5a10cfde, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.4
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7911515095766553325
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,14 +787,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchVelocity: 10000
-  nextFire: 0
-  fireRate: 0.1
-  bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515096049242037}
   playerProperties: {fileID: 11400000, guid: 23bb9dc1adb44964ba7f59ea518817b0, type: 2}
   ammoReplenishAmount: 20
+  weaponSound: {fileID: 0}
 --- !u!1 &7911515096548894812
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,14 +900,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchVelocity: 10000
-  nextFire: 0
-  fireRate: 0.1
-  bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515096698104663}
   playerProperties: {fileID: 11400000, guid: 23bb9dc1adb44964ba7f59ea518817b0, type: 2}
   ammoReplenishAmount: 20
+  weaponSound: {fileID: 0}
 --- !u!1 &7911515096711208025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,14 +1073,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchVelocity: 10000
-  nextFire: 0
-  fireRate: 0.1
-  bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515097192867591}
   playerProperties: {fileID: 11400000, guid: 23bb9dc1adb44964ba7f59ea518817b0, type: 2}
   ammoReplenishAmount: 20
+  weaponSound: {fileID: 0}
 --- !u!1 &7911515097243849018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,14 +1121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e65249a00d72684d82f5f3d3c6108e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchVelocity: 10000
-  nextFire: 0
-  fireRate: 0.1
-  bulletLifetime: 1
   projectilePrefab: {fileID: 3245952405213882285, guid: 7e8b625b67f49924abff443fed90dba9, type: 3}
   firePoint: {fileID: 7911515097243849019}
   playerProperties: {fileID: 11400000, guid: 23bb9dc1adb44964ba7f59ea518817b0, type: 2}
   ammoReplenishAmount: 20
+  weaponSound: {fileID: 0}
 --- !u!1 &7911515097519075112
 GameObject:
   m_ObjectHideFlags: 0
