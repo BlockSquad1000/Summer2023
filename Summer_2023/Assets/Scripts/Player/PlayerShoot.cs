@@ -102,7 +102,7 @@ public class PlayerShoot : MonoBehaviourPun
               //  {
                     GameObject go = Instantiate(projectilePrefab, firePoint);
                     go.GetComponent<ProjectileDamage>().Initialize(transform.forward, playerProperties.projectileSpeed, playerProperties.weaponDamage);
-                    //weaponSound.Play();
+                    weaponSound.Play();
                     currentAmmo--;
                     Debug.Log("Currently firing projectiles.");
             //    }

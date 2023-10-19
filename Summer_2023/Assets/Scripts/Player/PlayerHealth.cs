@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviourPun
     public Image healthBar;
     public float currentHealth;
     public int killValue;
+    public float healthRestoreAmount = 35f;
 
     public GameObject playerUIObject;
     public int respawnTime = 10;
@@ -126,5 +127,18 @@ public class PlayerHealth : MonoBehaviourPun
         ammo.MaxAmmo();
 
         ChangeLivingState(true);
+    }
+
+    public void ReplenishHealth()
+    {
+        if(currentHealth <= totalHealth)
+        {
+            currentHealth += healthRestoreAmount;
+
+            if(currentHealth >= totalHealth)
+            {
+                currentHealth = totalHealth;
+            }
+        }
     }
 }
