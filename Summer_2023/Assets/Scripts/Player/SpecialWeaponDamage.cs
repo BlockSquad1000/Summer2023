@@ -17,7 +17,7 @@ public class SpecialWeaponDamage : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             other.GetComponent<PlayerMovement>().slowEffectActive = true;
-            other.GetComponent<PlayerMovement>().SlowEffect();
+         //   other.GetComponent<PlayerMovement>().SlowEffect();
         }
     }
 
@@ -26,7 +26,7 @@ public class SpecialWeaponDamage : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             other.GetComponent<PlayerMovement>().slowEffectActive = false;
-            other.GetComponent<PlayerMovement>().SlowEffect();
+           // other.GetComponent<PlayerMovement>().SlowEffect();
         }
     }
 }

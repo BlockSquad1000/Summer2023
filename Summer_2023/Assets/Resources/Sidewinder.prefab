@@ -441,6 +441,8 @@ MonoBehaviour:
   strafeSpeed: 15
   hoverSpeed: 10
   speedBoost: 5
+  slowEffectActive: 0
+  slowAmount: 2
   forwardAcceleration: 2.5
   strafeAcceleration: 2
   hoverAcceleration: 2

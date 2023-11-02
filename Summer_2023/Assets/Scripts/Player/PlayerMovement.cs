@@ -11,9 +11,9 @@ public class PlayerMovement : MonoBehaviour
 
     public bool slowEffectActive;
     public float slowAmount;
-    public float slowForwardSpeed;
-    public float slowStrafeSpeed;
-    public float slowHoverSpeed;
+   // public float slowForwardSpeed;
+   // public float slowStrafeSpeed;
+   // public float slowHoverSpeed;
 
     private float activeForwardSpeed;
     private float activeStrafeSpeed;
@@ -74,19 +74,27 @@ public class PlayerMovement : MonoBehaviour
         myRB.isKinematic = true;
     }
 
-    public void SlowEffect()
+    public void OnTriggerStay(Collider other)
     {
-        if (slowEffectActive)
+        if(other.gameObject.tag == "PoisonCloud" && !slowEffectActive)
         {
+            slowEffectActive = true;
             forwardSpeed /= slowAmount;
             strafeSpeed /= slowAmount;
             hoverSpeed /= slowAmount;
+            Debug.Log("Entered a poison cloud.");
         }
-        if (!slowEffectActive)
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "PoisonCloud" && slowEffectActive)
         {
+            slowEffectActive = false;
             forwardSpeed *= slowAmount;
             strafeSpeed *= slowAmount;
             hoverSpeed *= slowAmount;
+            Debug.Log("Left a poison cloud.");
         }
     }
 }
