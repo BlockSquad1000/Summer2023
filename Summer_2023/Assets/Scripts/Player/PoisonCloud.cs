@@ -4,35 +4,41 @@ using UnityEngine;
 
 public class PoisonCloud : MonoBehaviour
 {
+    public Transform spawnPoint;
     public GameObject poisonCloud;
     public bool poisionActive = false;
 
-    public AudioSource cloudAudio;
+    public float activeCloudTime;
+    public float cooldownTime;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        poisonCloud.SetActive(false);
-    }
+    public AudioSource cloudAudio;
 
     // Update is called once per frame
     void Update()
     {
-     if (Input.GetKeyDown(KeyCode.R) && !poisionActive)
-        {
-            StartCoroutine(ResetPoisonCloud());
-            Debug.Log("Poison cloud is active.");
+        if (!poisionActive && Input.GetKeyDown(KeyCode.R))
+        {   
+            StartCoroutine(PoisonCloudActivate());
+            Debug.Log("Poison cloud is active.");        
         }
+        if (poisionActive && Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("Poison cloud is already active, cannot be used at this time.");
+        }
+     
     }
 
-    IEnumerator ResetPoisonCloud()
+    
+    IEnumerator PoisonCloudActivate()
     {
-        poisonCloud.SetActive(true);
-        poisionActive = true;
+        GameObject go = Instantiate(poisonCloud, spawnPoint); //Spawns the cloud at the position behind the player.
+        poisionActive = true; //While this bool is set to true, no more clouds can be spawned.
         cloudAudio.Play();
-        yield return new WaitForSeconds(3);
-        poisonCloud.SetActive(false);
-        poisionActive = false;
+        yield return new WaitForSeconds(activeCloudTime); //This is how long the cloud is active for.
+        Destroy(go.gameObject);
         Debug.Log("Poison cloud is inactive.");
+        yield return new WaitForSeconds(cooldownTime); //This is how long the cooldown as until the cloud can be used again.
+        poisionActive = false;
+        Debug.Log("Cooldown time has ended, cloud can be used again.");
     }
 }
