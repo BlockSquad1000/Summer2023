@@ -54,23 +54,25 @@ public class PlayerShoot : MonoBehaviourPun
             photonView.RPC("NotifyFire", RpcTarget.AllBuffered);
 
             primaryFire = true;
-            secondaryFire = false;
         }
         else
         {
             photonView.RPC("CeaseFire", RpcTarget.AllBuffered);
+
+            primaryFire = false;
         }
 
         if (Input.GetKey(KeyCode.Mouse1))
         {
             photonView.RPC("NotifyFire", RpcTarget.AllBuffered);
 
-            primaryFire = false;
             secondaryFire = true;
         }
         else
         {
             photonView.RPC("CeaseFire", RpcTarget.AllBuffered);
+
+            secondaryFire = false;
         }
 
     }
