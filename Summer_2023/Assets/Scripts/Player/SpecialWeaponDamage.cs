@@ -12,7 +12,7 @@ public class SpecialWeaponDamage : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
@@ -21,7 +21,7 @@ public class SpecialWeaponDamage : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
