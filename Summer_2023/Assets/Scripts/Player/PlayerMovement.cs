@@ -9,6 +9,12 @@ public class PlayerMovement : MonoBehaviour
     public float hoverSpeed;
     public float speedBoost;
 
+    public bool slowEffectActive;
+    public float slowAmount;
+    public float slowForwardSpeed;
+    public float slowStrafeSpeed;
+    public float slowHoverSpeed;
+
     private float activeForwardSpeed;
     private float activeStrafeSpeed;
     private float activeHoverSpeed;
@@ -66,5 +72,21 @@ public class PlayerMovement : MonoBehaviour
     public void DisableControls()
     {
         myRB.isKinematic = true;
+    }
+
+    public void SlowEffect()
+    {
+        if (slowEffectActive)
+        {
+            forwardSpeed /= slowAmount;
+            strafeSpeed /= slowAmount;
+            hoverSpeed /= slowAmount;
+        }
+        if (!slowEffectActive)
+        {
+            forwardSpeed *= slowAmount;
+            strafeSpeed *= slowAmount;
+            hoverSpeed *= slowAmount;
+        }
     }
 }

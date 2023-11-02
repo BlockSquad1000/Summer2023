@@ -31,7 +31,7 @@ public class PoisonCloud : MonoBehaviour
     
     IEnumerator PoisonCloudActivate()
     {
-        GameObject go = Instantiate(poisonCloud, spawnPoint); //Spawns the cloud at the position behind the player.
+        GameObject go = Instantiate(poisonCloud, spawnPoint.position, Quaternion.identity); //Spawns the cloud at the position behind the player.
         poisionActive = true; //While this bool is set to true, no more clouds can be spawned.
         cloudAudio.Play();
         yield return new WaitForSeconds(activeCloudTime); //This is how long the cloud is active for.

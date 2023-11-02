@@ -118,7 +118,7 @@ public class PlayerShoot : MonoBehaviourPun
             {
                 if (currentAmmo > 0)
                 {
-                    GameObject go = Instantiate(projectilePrefab, firePoint);
+                    GameObject go = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
                     go.GetComponent<ProjectileDamage>().Initialize(transform.forward, playerProperties.projectileSpeed, playerProperties.weaponDamage);
                     currentClip = firingSounds[1];
                     weaponAudio.clip = currentClip;
