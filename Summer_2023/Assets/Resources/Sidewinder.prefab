@@ -467,6 +467,7 @@ MonoBehaviour:
   activeCloudTime: 15
   cooldownTime: 5
   cloudAudio: {fileID: 6609238755615399876}
+  anim: {fileID: -6139573199711455535, guid: 5d551f9a3121ba344a4e45eeb0865278, type: 3}
 --- !u!114 &5456654268849078938
 MonoBehaviour:
   m_ObjectHideFlags: 0

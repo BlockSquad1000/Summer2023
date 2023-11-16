@@ -13,6 +13,8 @@ public class PoisonCloud : MonoBehaviour
 
     public AudioSource cloudAudio;
 
+    public Animator anim;
+
     // Update is called once per frame
     void Update()
     {
@@ -35,6 +37,9 @@ public class PoisonCloud : MonoBehaviour
         poisionActive = true; //While this bool is set to true, no more clouds can be spawned.
         cloudAudio.Play();
         yield return new WaitForSeconds(activeCloudTime); //This is how long the cloud is active for.
+        anim = go.gameObject.GetComponent<Animator>();
+        anim.Play("PoisonCloudShrink");
+        yield return new WaitForSeconds(1.2f);
         Destroy(go.gameObject);
         Debug.Log("Poison cloud is inactive.");
         yield return new WaitForSeconds(cooldownTime); //This is how long the cooldown as until the cloud can be used again.
