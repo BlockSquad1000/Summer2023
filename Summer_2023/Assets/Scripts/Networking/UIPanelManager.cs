@@ -33,6 +33,8 @@ public class UIPanelManager : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject playerListUIContainer;
     [SerializeField] private GameObject playerEntryPrefab;
     [SerializeField] private GameObject startGameButton;
+    [SerializeField] private GameObject joinTeamOneButton;
+    [SerializeField] private GameObject joinTeamTwoButton;
     [SerializeField] private Image roomPanelBackground;
     [SerializeField] private Sprite deathmatchBackground;
     [SerializeField] private Sprite ctfBackground;

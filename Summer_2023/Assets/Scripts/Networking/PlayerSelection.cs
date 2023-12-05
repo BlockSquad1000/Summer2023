@@ -7,14 +7,26 @@ using Photon.Pun;
 public class PlayerSelection : MonoBehaviour
 {
     public GameObject[] selectableCharacters;
+    public GameObject[] selectableTeams;
 
     private int activeCharacter = 0;
+    private int activeTeam = 0;
+
     public int ActiveCharacter
     {
         get { return activeCharacter; }
         set
         {
             activeCharacter = Mathf.Clamp(value, 0, selectableCharacters.Length - 1);
+        }
+    }
+
+    public int ActiveTeam
+    {
+        get { return activeTeam; }
+        set
+        {
+            activeTeam = Mathf.Clamp(value, 0, selectableTeams.Length - 1);
         }
     }
 
@@ -50,5 +62,4 @@ public class PlayerSelection : MonoBehaviour
         }
         ActivateCharacter(activeCharacter);
     }
- 
 }
