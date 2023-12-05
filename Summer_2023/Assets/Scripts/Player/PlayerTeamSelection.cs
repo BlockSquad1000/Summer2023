@@ -32,6 +32,7 @@ public class PlayerTeamSelection : MonoBehaviour
         }
     }
 
+    [PunRPC]
     public void JoinTeam(int thisTeam)
     {
         if (thisTeam == 1)
